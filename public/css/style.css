@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+:root {
+    --main-color: linear-gradient(rgba(144, 247, 236, 1), rgba(50, 204, 188, 1));
+    --color: rgb(144, 247, 237);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    min-width: 300px;
+    max-width: 1920px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+.header .border-navigate {
+    background-image: var(--main-color);
+    width: 100%;
+    height: 30px;
+}
+
+.navigate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+}
+
+.content {
+    min-height: calc(100vh - 130px);
+    margin: 50px 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    position: relative;
+    background-image: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
+
+.footer-image {
+    border-radius: 50px 50px;
+    width: 176px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-margem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-link {
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 110px;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 0.75em;
+    /* utilizar 'em' por ser um valor relativo ao valor padrão de 1px (cada dispositivo pode ter um valor diferente para 1px) OBS: 1em = 16px */
+    border-radius: 30%;
+    transition: all 400ms ease;
+}
+
+.header .navigate .menu-link a {
+    display: block;
+    color: var(--font-color);
+    text-decoration: none;
+    background-color: var(--main-color);
+    box-shadow: 5px 5px 5px rgba(144, 247, 237, 0.425);
+    border-radius: 30%;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+
+/* Dark mode button */
+
+[data-theme="dark"] {
+    --font-color: white;
+    --bg-color: black;
+}
+
+[data-theme="light"] {
+    --font-color: black;
+    --bg-color: white;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 80%;
+}
+
+em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    min-height: 34px;
+    /* 34px padrão */
+    position: relative;
+    min-width: 60px;
+    /* 60px padrão */
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-image: var(--main-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    /* 26px padrão */
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Footer Menu */
+
+.footer .navigate .menu-link a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: var(--main-color);
+    box-shadow: 5px 5px 5px rgba(144, 247, 237, 0.425);
+    border-radius: 30%;
+}
+
+.header .navigate .menu-link a:hover,
+.header .navigate .menu-link.active,
+.menu-link:hover {
+    background-image: var(--main-color);
+}
+
+.footer .navigate .menu-link a:hover,
+.footer .navigate .menu-link.active {
+    background-color: black;
+}
+
+.copyright {
+    text-align: center;
+    color: white;
+    width: 30%;
+    margin: 5px;
+}
+
+
+/* doing at home page */
+
+.logo {
+    width: 100%;
+    height: 20px;
+    background-image: var(--main-color);
+}
+
+.section {
+    margin: 25px 0;
+    width: 100%;
+}
+
+.section-inline {
+    display: flex;
+}
+
+.text-section #link {
+    text-decoration: none;
+    color: rgba(144, 247, 236, 1);
+}
+
+.text-section #link:hover {
+    text-decoration: underline wavy;
+    text-decoration-color: rgb(144, 247, 237);
+}
+
+hr {
+    background-image: var(--main-color);
+    height: 1px;
+}
+
+hr.title-section-line,
+hr.title-line {
+    width: 50px;
+}
+
+.section .title-section,
+.title {
+    font-family: 'Fredericka the Great', "Comic Sans MS", cursive;
+    font-weight: bolder;
+    /* background-image: linear-gradient(to right, var(--color), transparent);
+    text-indent: 10px; */
+}
+
+.section .text-section {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: var(--font-color);
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.table-champions {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.grid-champions {
+    display: grid;
+    grid-template-columns: repeat(2, 40px);
+    grid-template-rows: repeat(2, 40px);
+    grid-gap: 15px;
+    margin-left: 10%;
+}
+
+.grid-trofeus {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(2, 40px);
+    grid-gap: 15px;
+    margin-left: 5%;
+}
+
+.champions-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* border: 2px solid rgba(0, 0, 0, 0.5); */
+    box-shadow: 0 0 0.4em black;
+}
+
+.page-title {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 25px;
+}
+
+.video {
+    width: 60%;
+    height: 400px;
+    margin: auto;
+}
+
+@media (min-width: 10px) and (max-width: 780px) {
+    .footer-margem {
+        display: none;
+    }
+}
+
+@media (min-width: 10px) and (max-width: 376px) {
+    .footer {
+        display: none;
+    }
+    .theme-switch-wrapper {
+        display: none;
+    }
+    .video {
+        width: 70%;
+        height: 160px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+    .footer {
+        height: 130px;
+    }
+    .video {
+        width: 70%;
+        height: 250px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        height: 160px;
+    }
+    .video {
+        width: 60%;
+        height: 280px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer {
+        height: 180px;
+    }
+    .video {
+        width: 60%;
+        height: 400px;
+    }
+}

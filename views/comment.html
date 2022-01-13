@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\assets\images\euro-icon.ico" type="image/x-icon">
+    <title>Buscador de CEP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="..\public\css\style.css">
+    <link rel="stylesheet" href="..\public\css\comment.css">
+
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="border-navigate"></div>
+        <nav class="navigate">
+            <div class="menu-link active"><a href="comment.html">HOME</a></div>
+            <div class="menu-link"><a href="about.html">SOBRE</a></div>
+        </nav>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em id='change-txt'>Ativar MODO ESCURO!</em>
+        </div>
+
+        <script src="../public/js/home.js"></script>
+        <script src="../public/js/comment.js"></script>
+
+    </header>
+
+    <div class="content">
+        <section class="section">
+            <h3 class="title-section">Buscar CEP</h3>
+            <hr class="title-section-line">
+        </section>
+        <section class="section comments"></section>
+
+        <section class="section">
+            <h3 class="form-title">Digite o CEP desejado e as informações serão completadas!</h3>
+            <form onsubmit="formValid(); return false" id='comment-form' class="form">
+                <div class="col-1">
+
+                        <label> CEP:
+                            <input class="input-cep" type="text" placeholder=" CEP" required>
+                        </label>
+                        <label> Rua:
+                            <input class="input-rua" type="text" placeholder=" Rua">
+                        </label>
+                        <label> Bairro:
+                            <input class="input-bairro" type="text" placeholder=" Bairro">
+                        </label>
+                            <!-- <span class="input-name-error" style="color:red">* CEP Inválido!</span> -->
+                        <label> Cidade: 
+                            <input class="input-cidade" type="text" placeholder=" Cidade">
+                        </label>
+                        <label > Estado: 
+                            <input class="input-estado" type="text" placeholder=" Estado">
+                        </label>
+                        <label> IBGE:
+                            <input class="input-ibge" type="text" placeholder=" IBGE">
+                        </label>
+                    
+
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-margem">
+            <img class="footer-image" src="..\assets\images\logo-euro.jpg" alt="logo-euro">
+            <h6 class="copyright"> Ⓒ Feito por Matheus Macedo e Maickel Alves </h6>
+        </div>
+        <nav class="navigate">
+            <div class="menu-link active"><a href="comment.html">HOME</a></div>
+            <div class="menu-link"><a href="about.html">SOBRE</a></div>
+        </nav>
+        <div class="footer-margem"></div>
+    </footer>
+
+</body>
+
+</html>

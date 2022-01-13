@@ -1,0 +1,113 @@
+.comment,
+.form {
+    padding: 20px 10%;
+    color: white;
+    background-image: var(--main-color);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comment-line {
+    background-color: white;
+    background-image: none;
+    width: 100px;
+}
+
+.comment-text {
+    padding-bottom: 20px;
+}
+
+.comment-name {
+    padding: 4px 0px;
+}
+
+img.rate {
+    width: 25px;
+    padding-top: 5%;
+}
+
+.comment-flag {
+    height: 20px;
+    margin-left: 0.5em;
+}
+
+.input-cep,
+.input-rua,
+.input-bairro,
+.input-cidade,
+.input-estado,
+.input-ibge {
+    height: 30px;
+    margin: 2%;
+    border-radius: 5px;
+}
+
+.input-cep,
+.input-ibge {
+    width: 15%;
+}
+
+.input-rua {
+    width: 50%;
+}
+
+.input-bairro,
+.input-cidade {
+    width: 30%;
+}
+
+.input-estado {
+    width: 5%;
+}
+
+button {
+    margin-top: 30%;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 25px;
+}
+
+.form-title {
+    width: 100%;
+    text-align: center;
+    color: var(--main-color);
+    padding: 8px 0;
+}
+
+.rates {
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+}
+
+@media (min-width: 10px) and (max-width: 376px) {
+    .input-name,
+    .input-email,
+    .input-selecao {
+        /* width: 30%; */
+        height: 80%;
+    }
+    button {
+        height: 70%;
+        width: 100%;
+        font-size: 70%;
+    }
+    .rates {
+        padding: 1px 0;
+        font-size: 80%;
+    }
+    .rate {
+        padding-top: 15%;
+    }
+}
