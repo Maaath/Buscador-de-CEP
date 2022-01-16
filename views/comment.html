@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="..\assets\images\euro-icon.ico" type="image/x-icon">
+    <link rel="icon" href="..\assets\images\c3cep.ico" type="image/x-icon">
     <title>Buscador de CEP</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,7 @@
 <body>
     <header id="header" class="header">
         <div class="border-navigate"></div>
+        <img class="logo-c3" src="..\assets\images\c3cep.png" alt="c3cep">
         <nav class="navigate">
             <div class="menu-link active"><a href="comment.html">HOME</a></div>
             <div class="menu-link"><a href="about.html">SOBRE</a></div>
@@ -75,11 +76,49 @@
 
             </form>
         </section>
+
+        <!-- <section class="section">
+
+            <div id="map">
+                
+                <script>
+                    var cep = "05269030";
+                    var link = "https://maps.googleapis.com/maps/api/geocode/json?address="+cep+"&key=AIzaSyCkffNmjp9VX5JRu_pLqckXGEcFLr_XPug"
+                    console.log(link)
+                    var latitude = -22.912869
+                    var longitude = -43.228354
+                
+                    function start() {
+
+                        var coords = {lat: latitude, lng: longitude};
+                        console.log(coords)
+
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: coords
+                        });
+
+                        var marker = new google.maps.Marker({
+                        position: coords,
+                        map: map,
+                        title: 'My marker'
+                        });
+                    }
+                </script>
+                
+
+                <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkffNmjp9VX5JRu_pLqckXGEcFLr_XPug&callback=start">
+                </script>
+
+            </div>
+        </section> -->
+    
     </div>
 
     <footer class="footer">
         <div class="footer-margem">
-            <img class="footer-image" src="..\assets\images\logo-euro.jpg" alt="logo-euro">
+            <img class="footer-image" src="..\assets\images\c3cep.png" alt="c3cep">
             <h6 class="copyright"> Ⓒ Feito por Matheus Macedo e Maickel Alves </h6>
         </div>
         <nav class="navigate">

@@ -91,6 +91,15 @@ button {
     padding: 5px 0;
 }
 
+#map {
+    display: flex;
+    height:500px;
+    width:80%;
+    justify-content: center;
+    align-content: center;
+    
+  }
+
 @media (min-width: 10px) and (max-width: 376px) {
     .input-name,
     .input-email,

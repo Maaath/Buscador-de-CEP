@@ -21,6 +21,17 @@ body {
     background-color: var(--bg-color);
 }
 
+.logo-c3 {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 2%;
+    border-radius: 50px 50px;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+}
+
 .header .border-navigate {
     background-image: var(--main-color);
     width: 100%;
