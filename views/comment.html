@@ -10,6 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="..\public\css\style.css">
@@ -77,14 +78,16 @@
             </form>
         </section>
 
-        <!-- <section class="section">
+        <section class="section">
 
             <div id="map">
                 
                 <script>
                     var cep = "05269030";
-                    var link = "https://maps.googleapis.com/maps/api/geocode/json?address="+cep+"&key=AIzaSyCkffNmjp9VX5JRu_pLqckXGEcFLr_XPug"
-                    console.log(link)
+                     $.get("http://api.positionstack.com/v1/forward?access_key=6d35cb62594c193d220e29dc94bef3b1&query=1600+Pennsylvania+Ave+NW,+Washington+DC", function(result){
+                        console.log(result);
+                    })
+                   
                     var latitude = -22.912869
                     var longitude = -43.228354
                 
@@ -112,7 +115,7 @@
                 </script>
 
             </div>
-        </section> -->
+        </section>
     
     </div>
 
