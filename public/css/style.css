@@ -311,6 +311,15 @@ hr.title-line {
     margin: auto;
 }
 
+.form-input {
+    display: flex;
+    align-items: center;
+}
+
+.form-input label {
+    min-width: 80px;
+}
+
 @media (min-width: 10px) and (max-width: 780px) {
     .footer-margem {
         display: none;

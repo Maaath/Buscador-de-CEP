@@ -58,7 +58,7 @@ img.rate {
 }
 
 .input-rua {
-    width: 50%;
+    width: 80%;
 }
 
 .input-bairro,
@@ -92,12 +92,11 @@ button {
 }
 
 #map {
-    height:500px;
-    width:80%;
+    height: 500px;
+    width: 80%;
     justify-content: center;
     align-content: center;
-    
-  }
+}
 
 @media (min-width: 10px) and (max-width: 376px) {
     .input-name,
