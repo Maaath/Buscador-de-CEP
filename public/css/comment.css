@@ -92,7 +92,6 @@ button {
 }
 
 #map {
-    display: flex;
     height:500px;
     width:80%;
     justify-content: center;

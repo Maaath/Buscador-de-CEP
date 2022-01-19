@@ -224,6 +224,11 @@ input:checked+.slider:before {
     width: 100%;
 }
 
+.map-section {
+    display: flex;
+    justify-content: center;
+}
+
 .section-inline {
     display: flex;
 }
