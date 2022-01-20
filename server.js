@@ -9,7 +9,7 @@ app.use('/assets', express.static('assets'));
 app.get('/', function(req, res){
     res.sendFile(__dirname +'/views/home.html');
 })
-
+ 
 app.get('/about', function(req, res){
     res.sendFile(__dirname +'/views/about.html');
 })
