@@ -17,7 +17,6 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.sendFile(__dirname + '/views/about.html');
 })
-<<<<<<< HEAD
 
 app.post('/viacep', async function(req, res) {
     const { cep } = req.body;
@@ -29,11 +28,10 @@ app.post('/viacep', async function(req, res) {
         });
 
     res.json(result.data);
-=======
+})
  
 app.get('/about', function(req, res){
     res.sendFile(__dirname +'/views/about.html');
->>>>>>> 59fba3f170df53534c4c104227ad138fae578f50
 })
 
 //localhost:8080
