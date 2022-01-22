@@ -77,6 +77,9 @@
                         <label> IBGE:</label>
                         <input class="input-ibge" type="text" placeholder=" IBGE" disabled>
                     </div>
+                    <div class="form-input">
+                        <div class="menu-link-btn active" style="text-decoration: none;"><a href="/">Nova Requisição</a></div>
+                    </div>
 
 
                 </div>
@@ -120,46 +123,49 @@
                     }
                     $('.input-cep').change(function() {
                         var cep = $(this).val();
+                        cep = cep.replaceAll('-', "").replaceAll('.', '');
+                        if (cep.length == 8) {
 
-                        $.post('/viacep', {
-                            cep
-                        }, function(dados) {
-                            console.log(dados);
+                            $('.input-cep').attr('disabled', 'disabled');
 
-                            if (dados) {
-                                $('.input-rua').val(dados.logradouro);
-                                $('.input-bairro').val(dados.bairro);
-                                $('.input-cidade').val(dados.localidade);
-                                $('.input-estado').val(dados.uf);
-                                $('.input-ibge').val(dados.ibge);
-
-                                var cidade = (dados.localidade).replaceAll(' ', '+');
-                                var rua = (dados.logradouro).replaceAll(' ', '+');
-
-                                var numero = prompt("Digite o número da localização para saber a geolocalização");
-
-                                if (numero) {
-                                    $.get(`http://api.positionstack.com/v1/forward?access_key=6d35cb62594c193d220e29dc94bef3b1&query=${rua}+${numero}+${cidade}+${estados[dados.uf]}`, function(result) {
-
-                                        console.log(result.data)
-                                        var latitude = result.data[0].latitude;
-                                        var longitude = result.data[0].longitude;
-                                        start(latitude, longitude);
-                                    })
+                            $.post('/viacep', {
+                                cep
+                            }, function(dados) {
+                                if (dados.erro) {
+                                    alert("CEP Invalido, tente novamente!");
+                                    window.location.reload();
                                 }
-                            }
-                        })
+                                if (dados) {
+                                    $('.input-rua').val(dados.logradouro);
+                                    $('.input-bairro').val(dados.bairro);
+                                    $('.input-cidade').val(dados.localidade);
+                                    $('.input-estado').val(dados.uf);
+                                    $('.input-ibge').val(dados.ibge);
+
+                                    var cidade = (dados.localidade).replaceAll(' ', '+');
+                                    var rua = (dados.logradouro).replaceAll(' ', '+');
+
+                                    var numero = prompt("Digite o número da localização para saber a geolocalização");
+
+                                    if (numero) {
+                                        $.get(`http://api.positionstack.com/v1/forward?access_key=6d35cb62594c193d220e29dc94bef3b1&query=${rua}+${numero}+${cidade}+${estados[dados.uf]}`, function(result) {
+                                            var latitude = result.data[0].latitude;
+                                            var longitude = result.data[0].longitude;
+                                            start(latitude, longitude);
+                                        })
+                                    }
+                                }
+                            })
+                        }
                     });
 
                     function start(latitude, longitude) {
                         if (latitude && longitude) {
 
-
                             var coords = {
                                 lat: latitude,
                                 lng: longitude
                             };
-                            console.log(coords)
 
                             var map = new google.maps.Map(document.getElementById('map'), {
                                 zoom: 15,

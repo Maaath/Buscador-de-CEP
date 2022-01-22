@@ -29,9 +29,9 @@ app.post('/viacep', async function(req, res) {
 
     res.json(result.data);
 })
- 
-app.get('/about', function(req, res){
-    res.sendFile(__dirname +'/views/about.html');
+
+app.get('/about', function(req, res) {
+    res.sendFile(__dirname + '/views/about.html');
 })
 
 //localhost:8080

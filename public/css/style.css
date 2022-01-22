@@ -78,7 +78,8 @@ body {
     flex-direction: column;
 }
 
-.menu-link {
+.menu-link,
+.menu-link-btn {
     text-align: center;
     margin-right: 10px;
     margin-left: 10px;
@@ -318,6 +319,23 @@ hr.title-line {
 
 .form-input label {
     min-width: 80px;
+}
+
+.form-input .menu-link-btn {
+    background-color: black;
+}
+
+.form-input .menu-link-btn.active:hover {
+    background-color: white;
+}
+
+.form-input .menu-link-btn a:hover {
+    color: black;
+}
+
+.form-input .menu-link-btn a {
+    color: white;
+    text-decoration: none;
 }
 
 @media (min-width: 10px) and (max-width: 780px) {
