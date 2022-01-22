@@ -36,7 +36,7 @@
         </div>
 
         <script src="../public/js/home.js"></script>
-        
+
 
     </header>
 
@@ -120,7 +120,12 @@
                     }
                     $('.input-cep').change(function() {
                         var cep = $(this).val();
-                        $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados) {
+
+                        $.post('/viacep', {
+                            cep
+                        }, function(dados) {
+                            console.log(dados);
+
                             if (dados) {
                                 $('.input-rua').val(dados.logradouro);
                                 $('.input-bairro').val(dados.bairro);
