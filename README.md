@@ -1,5 +1,5 @@
-# Buscador de CEP
-> Este projeto contém a implementação de uma aplicação Cliente/Servidor para web, sendo a parte do servidor acessada por meio das APIs Maps JavaScript API (Google), Geocoding API (PositionStack) e o Web service VIACEP.
+# Search Zip Code (Brazil)
+> This project contains the implementation of a Client/Server application for the web, the server part being accessed through the Maps JavaScript API (Google), Geocoding API (PositionStack) and the VIACEP web service.
 
 ![Capturar](https://user-images.githubusercontent.com/38335297/158402446-e2460b06-ca56-4ba6-96dd-1b8c6d1904a2.PNG)
 
